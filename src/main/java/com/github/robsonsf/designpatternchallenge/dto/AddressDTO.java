@@ -1,5 +1,7 @@
 package com.github.robsonsf.designpatternchallenge.dto;
 
+import com.github.robsonsf.designpatternchallenge.entities.Address;
+
 public class AddressDTO {
 	private String cep;
 	private String logradouro;
@@ -11,6 +13,19 @@ public class AddressDTO {
 	private String gia;
 	private String ddd;
 	private String siafi;
+
+	public AddressDTO(Address address) {
+		this.cep = address.getCep();
+		this.logradouro = address.getLogradouro();
+		this.complemento = address.getComplemento();
+		this.bairro = address.getBairro();
+		this.localidade = address.getLocalidade();
+		this.uf = address.getUf();
+		this.ibge = address.getIbge();
+		this.gia = address.getGia();
+		this.ddd = address.getDdd();
+		this.siafi = address.getSiafi();
+	}
 
 	public String getCep() {
 		return cep;
