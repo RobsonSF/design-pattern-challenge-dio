@@ -1,21 +1,33 @@
 package com.github.robsonsf.designpatternchallenge.entities;
 
+import java.io.Serializable;
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 
 @Entity
-public class Address {
+public class Address implements Serializable{
+	private static final long serialVersionUID = 1L;
 
 	@Id
 	private String cep;
+	
 	private String logradouro;
+	
 	private String complemento;
+	
 	private String bairro;
+	
 	private String localidade;
+	
 	private String uf;
+	
 	private String ibge;
+	
 	private String gia;
+	
 	private String ddd;
+	
 	private String siafi;
 
 	public String getCep() {
